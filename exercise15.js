@@ -1,22 +1,23 @@
 function groupAnimals(animals) {
   animals.sort();
-  var arr_result = [];
-  var first_alphabet = animals[0][0];
-  var arr_temp = [];
+  var result = [];
+  var first = animals[0][0];
+  var temp = [];
   for (var i = 0; i < animals.length; i++) {
-    if (animals[i][0] === first_alphabet) {
-      arr_temp.push(animals[i]);
+    if (animals[i][0] === first) {
+      temp.push(animals[i]);
     } else {
-      arr_result.push(arr_temp);
-      arr_temp = [];
-      first_alphabet = animals[i][0];
-      arr_temp.push(animals[i]);
+      result.push(temp);
+      temp = [];
+      first = animals[i][0];
+      temp.push(animals[i]);
     }
+    
     if (i === animals.length-1) {
-      arr_result.push(arr_temp);
+      result.push(temp);
     }
   }
-  return arr_result;
+  return result;
 }
 
 // TEST CASES

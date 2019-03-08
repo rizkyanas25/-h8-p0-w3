@@ -1,21 +1,28 @@
 function mengelompokkanAngka(arr) {
-  var arr_result = [[],[],[]];
+  var result = [[],[],[]];
   for (var i = 0; i < arr.length; i++) {
     //urutan prioritas kelipatan 3 -> ganjil -> genap
     if (arr[i] % 3 === 0) {
-      arr_result[2].push(arr[i]);
-      continue;
+      result[2].push(arr[i]);
     }
+
     if (arr[i] % 2 !== 0) {
-      arr_result[1].push(arr[i]);
-      continue;
+      result[1].push(arr[i]);
     }
+
     if (arr[i] % 2 === 0) {
-      arr_result[0].push(arr[i]);
-      continue;
+      result[0].push(arr[i]);
     }
+    
+    // if (arr[i] % 2 === 0) {
+    //     result[0].push(arr[i]);
+    // } else if (arr[i] % 2 !== 0) {
+    //     result[0].push(arr[i]);
+    // } else if (arr[i] % 3 === 0) {
+    //     result[2].push(arr[i]);
+    // }
   }
-  return arr_result;
+  return result;
 }
 
 // TEST CASES

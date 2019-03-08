@@ -2,12 +2,11 @@ function perkalianUnik(arr) {
   // you can only write your code here!
 
   var newArr = []
-  
-  for(var i=0; i<arr.length; i++){
+  for(var i = 0; i<arr.length; i++){
     var multiply = 1
-    for(var j =0; j<arr.length; j++){
+    for(var j = 0; j<arr.length; j++){
       if(i !== j){
-        multiply*=arr[j]
+        multiply *= arr[j]
       }
       
     }

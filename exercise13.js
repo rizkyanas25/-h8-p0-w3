@@ -1,32 +1,26 @@
 function targetTerdekat(arr) {
   // you can only write your code here!
-  var positionO = arr.indexOf('o');
-  //console.log(positionO);
+  var positionO = []
   var positionX = []
-  for(var i =0; i<arr.length;i++){
-    if(arr[i]==='x'){
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === 'x') {
       positionX.push(i)
+    } else if (arr[i] === 'o') {
+      positionO.push(i)
     }
   }
-  //console.log(positionX);
-  var nearest = []
-  for(var j =0; j<positionX.length;j++){
-    var range = Math.abs(positionX[j]-positionO);
-    nearest.push(range)
-  }
-  //console.log(nearest);
-  var nearestRange = nearest[0]
-  if(nearest.length<1){
+  //position of x and o
+  // console.log(positionX)
+  // console.log(positionO)
+  if (positionX.length === 0) { //if x is not found
     return 0
-  }else{
-  for(var k =0; k<nearest.length; k++){
-    if(nearest[k]<nearestRange){
-      nearestRange=nearest[k]
+  } else {
+    if (positionX[0] < positionO[0]) {
+      return Math.abs(positionX[positionX.length-1] - positionO[0])
+    } else {
+      return Math.abs(positionO[positionO.length-1] - positionX[0])
     }
-  }  
   }
-  
-  return nearestRange;
 }
 
 // TEST CASES

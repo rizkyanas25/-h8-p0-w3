@@ -1,16 +1,15 @@
 function tentukanDeretGeometri(arr) {
   // you can only write your code here!
-  var geo= (arr[1]/arr[0]);
-  var hitungGeo=0;
-  for(var i=0; i<arr.length; i++){
-    if((arr[i]/arr[i-1])===geo){
-    hitungGeo++;
+  var geo = (arr[1] / arr[0])
+  var calcGeo = 0
+  for(var i = 0; i < arr.length; i++) {
+    if((arr[i] / arr[i-1]) === geo) {
+      calcGeo++
+    }
   }
-  }
-  if (hitungGeo===arr.length-1){
+  if (calcGeo === arr.length-1) {
     return true;
-  }
-  else{
+  } else {
     return false;
   }
 }

@@ -1,15 +1,15 @@
 function tentukanDeretAritmatika(arr) {
     // you can only write your code here!
-    var arith = arr[1]-arr[0]
-    //console.log(arit)
+    var arith = arr[1] - arr[0]
+    //console.log(arith)
     var jumlah = 0
-    for(var i=0; i<arr.length;i++){
-      if((arr[i+1]-arr[i]) === arith){
+    for(var i = 0; i < arr.length; i++) {
+      if((arr[i+1] - arr[i]) === arith) {
         jumlah++
        // return true
       }
     }
-    if(jumlah===arr.length-1){
+    if(jumlah === arr.length-1) {
       return true
     }else{
       return false

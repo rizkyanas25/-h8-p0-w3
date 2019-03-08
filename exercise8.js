@@ -1,14 +1,14 @@
 function pasanganTerbesar(num) {
   // you can only write your code here!
-  var angka = String(num).split('')
-  var banding = angka[0]+angka[1]
-  for(var i =0; i<angka.length; i++){
-    if(angka[i]>banding){
-      banding=angka[i]+angka[i+1]
+  var newNum = String(num)
+  var biggest = newNum[0]+newNum[1]
+  for(var i = 0; i < newNum.length; i++) {
+    if(newNum[i] > biggest) {
+      biggest = newNum[i] + newNum[i+1]
     }
-   // console.log(banding)
+   // console.log(biggest)
   }
-  return Number(banding)
+  return Number(biggest)
 }
 
 // TEST CASES
