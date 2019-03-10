@@ -13,7 +13,6 @@ function groupAnimals(animals) {
     if (find === false) {
       temp.push(animals[i])
       result.push(temp)
-      find = false
     }
   }
 
